@@ -1,0 +1,76 @@
+{
+    "version": "2.0.0",
+    "echoCommand": true,
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "Build Pinetime Boot",
+            "type": "shell",
+            "command": "newt",
+            "args": ["build", "pinetime-boot"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Build Pinetime",
+            "type": "shell",
+            "command": "newt",
+            "args": ["build", "pinetime"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        },
+        {
+            "label": "Create Pinetime",
+            "type": "shell",
+            "command": "newt",
+            "args": ["create-image", "pinetime", "1.0.0"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        },
+        {
+            "label": "Upload Pinetime Boot",
+            "type": "shell",
+            "command": "newt",
+            "args": ["load", "pinetime-boot"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        },
+        {
+            "label": "Upload Pinetime",
+            "type": "shell",
+            "command": "newt",
+            "args": ["load", "pinetime"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        },
+        {
+            "label": "Debug Pinetime",
+            "type": "shell",
+            "command": "newt",
+            "args": ["debug", "pinetime", "-n"],
+            "group": "build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        }
+    ]
+}
